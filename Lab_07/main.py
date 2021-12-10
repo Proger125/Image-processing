@@ -20,6 +20,7 @@ def open_image_handler():
     global main_image_cv2
     file_name = fd.askopenfilename(filetypes=(("JPEG files", "*.jpg"), ("PNG files", "*.png")))
     main_image_cv2 = cv2.imread(file_name)
+    main_image_cv2 = cv2.cvtColor(main_image_cv2, cv2.COLOR_BGR2RGB)
     figure = plt.figure(figsize=(4, 4))
     c = FigureCanvasTkAgg(figure, root)
     c.get_tk_widget().place(x=10, y=200)
