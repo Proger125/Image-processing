@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import filedialog as fd
-import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import cv2
@@ -12,9 +11,6 @@ root.geometry('1300x700')
 main_image_cv2 = None
 
 contour_image_cv2 = None
-
-hsv_min = np.array((59, 119, 17), np.uint8)
-hsv_max = np.array((79, 255, 255), np.uint8)
 
 
 def open_image_handler():

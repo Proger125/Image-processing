@@ -127,7 +127,6 @@ def binarization():
 
     image_height, image_width = bin_image.size
     treshold = find_treshold()
-    print(treshold)
 
     for i in range(image_height):
         for j in range(image_width):
